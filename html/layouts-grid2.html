@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--
+
+TABLE OF CONTENTS.
+
+Use search to find needed section.
+
+=====================================================
+
+|  1. $BODY                 |  Body                 |
+|  2. $MAIN_NAVIGATION      |  Main navigation      |
+|  3. $NAVBAR_ICON_BUTTONS  |  Navbar Icon Buttons  |
+|  4. $MAIN_MENU            |  Main menu            |
+|  5. $GRID                 |  Grid                 |
+
+=====================================================
+
+-->
+
+
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 gt-ie8"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="gt-ie8 gt-ie9 not-ie"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Grid - Layouts - PixelAdmin</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<!-- Open Sans font from Google CDN -->
+	<!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">-->
+
+	<!-- Pixel Admin's stylesheets -->
+	<link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/stylesheets/pixel-admin.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/stylesheets/widgets.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/stylesheets/rtl.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
+
+	<!--[if lt IE 9]>
+		<script src="assets/javascripts/ie.min.js"></script>
+	<![endif]-->
+
+	<style>
+		h4 {
+			margin-bottom: 20px;
+			margin-top: 30px;
+		}
+		.grid-example .row {
+			margin-bottom: 20px;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.grid-example [class*="col-"] {
+			background: #f2f2f2;
+			background: rgba(0,0,0,.05);
+			border: 1px solid;
+			border-color: #d9d9d9;
+			border-color: rgba(0,0,0,.1);
+			padding-bottom: 10px;
+			padding-top: 10px;
+			text-align: center;
+			-webkit-transition: all .3s;
+			-moz-transition: all .3s;
+			-ms-transition: all .3s;
+			-o-transition: all .3s;
+			transition: all .3s;
+		}
+		.grid-example [class*="col-"]:hover {
+			background: #d9d9d9;
+			background: rgba(0,0,0,.1);
+		}
+	</style>
+
+</head>
+
+
+<!-- 1. $BODY ======================================================================================
+	
+	Body
+
+	Classes:
+	* 'theme-{THEME NAME}'
+	* 'right-to-left'      - Sets text direction to right-to-left
+	* 'main-menu-right'    - Places the main menu on the right side
+	* 'no-main-menu'       - Hides the main menu
+	* 'main-navbar-fixed'  - Fixes the main navigation
+	* 'main-menu-fixed'    - Fixes the main menu
+	* 'main-menu-animated' - Animate main menu
+-->
+<body class="theme-default main-menu-animated">
+
+<script>var init = [];</script>
+<!-- Demo script --> <script src="assets/demo/demo.js"></script> <!-- / Demo script -->
+
+<div id="main-wrapper">
+
+
+	<div id="navbar"></div>
+
+	<div id="menu"></div>
+
+
+	<div id="content-wrapper">
+  		<div class="page-header">
+			<h1><span class="text-light-gray">Layouts / </span>Grid</h1>
+		</div> <!-- / .page-header -->
+
+		<div class="note note-info">More info and examples at <a href="http://getbootstrap.com/css/#grid" target="_blank">http://getbootstrap.com/css/#grid</a></div>
+
+<!-- 5. $GRID ======================================================================================
+
+		Grid
+-->
+		
+		<!-- Stacked-to-horizontal -->
+
+		<h4 class="text-slim">Stacked-to-horizontal</h4>
+
+		<div class="grid-example">
+			<div class="row">
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+				<div class="col-md-1">.col-md-1</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">.col-md-8</div>
+				<div class="col-md-4">.col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">.col-md-6</div>
+				<div class="col-md-6">.col-md-6</div>
+			</div>
+		</div>
+
+
+		<!-- Mobile and desktop -->
+
+		<h4 class="text-slim">Mobile and desktop</h4>
+
+		<div class="grid-example">
+			<div class="row">
+				<div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">.col-xs-6</div>
+				<div class="col-xs-6">.col-xs-6</div>
+			</div>
+		</div>
+
+
+		<!-- Mobile, tablet, desktops -->
+
+		<h4 class="text-slim">Mobile, tablet, desktops</h4>
+
+		<div class="grid-example">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+				<div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+				<!-- Optional: clear the XS cols if their content doesn't match in height -->
+				<div class="clearfix visible-xs"></div>
+				<div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+			</div>
+		</div>
+
+
+		<!-- Responsive column resets -->
+
+		<h4 class="text-slim">Responsive column resets</h4>
+
+		<div class="grid-example">
+			<div class="row">
+				<div class="col-xs-6 col-sm-3">
+					.col-xs-6 .col-sm-3
+					<br>
+					Resize your viewport or check it out on your phone for an example.
+				</div>
+				<div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+				<!-- Add the extra clearfix for only the required viewport -->
+				<div class="clearfix visible-xs"></div>
+
+				<div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+				<div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+			</div>
+		</div>
+
+
+		<!-- Offsetting columns -->
+
+		<h4 class="text-slim">Offsetting columns</h4>
+
+		<div class="grid-example">
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+				<div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+			</div>
+		</div>
+
+
+		<!-- Nesting columns -->
+
+		<h4 class="text-slim">Nesting columns</h4>
+
+		<div class="grid-example">
+			<div class="row">
+				<div class="col-md-9">
+					Level 1: .col-md-9
+					<div class="row">
+						<div class="col-md-6">
+							Level 2: .col-md-6
+						</div>
+						<div class="col-md-6">
+							Level 2: .col-md-6
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Column ordering -->
+
+		<h4 class="text-slim">Column ordering</h4>
+
+		<div class="grid-example">
+			<div class="row">
+				<div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+				<div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
+			</div>
+		</div>
+
+	</div> <!-- / #content-wrapper -->
+	<div id="main-menu-bg"></div>
+</div> <!-- / #main-wrapper -->
+
+<!-- Get jQuery from Google CDN -->
+<!--[if !IE]> -->
+	<script type="text/javascript"> window.jQuery || document.write('<script src="assets/javascripts/jquery-1.8.3.min.js">'+"<"+"/script>"); </script>
+<!-- <![endif]-->
+<!--[if lte IE 9]>
+	<script type="text/javascript"> window.jQuery || document.write('<script src="assets/javascripts/jquery-1.8.3.min.js">'+"<"+"/script>"); </script>
+<![endif]-->
+
+
+<!-- Pixel Admin's javascripts -->
+<script src="assets/javascripts/bootstrap.min.js"></script>
+<script src="assets/javascripts/pixel-admin.min.js"></script>
+
+<script src="static/js/commons.js"></script>
+
+
+<script type="text/javascript">
+
+	$('#navbar').html(function () {
+		return getHtml('views/navbar.html');
+	});
+	$('#menu').html(function () {
+		return getHtml('views/menu.html');
+	});
+
+
+	init.push(function () {
+		//Javascript code here
+		$('#main-menu, #main-navbar').on('touchend', 'a', function(){
+			$(this).trigger('click');
+			return false;
+		});
+		$('#main-menu, #main-navbar').on('touchend', 'button', function(){
+			$(this).trigger('click');
+			return false;
+		});
+	})
+	window.PixelAdmin.start(init);
+</script>
+
+</body>
+</html>
