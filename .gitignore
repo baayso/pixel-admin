@@ -1,0 +1,19 @@
+.svn
+
+# Eclipse #
+.project
+.classpath
+.settings
+
+# IntelliJ IDEA #
+*.ipr
+*.iws
+*.iml
+.idea
+out
+
+# Windows #
+Thumbs.db
+
+# Mac #
+.DS_Store
