@@ -74,7 +74,7 @@ Use search to find needed section.
 
 	<div id="navbar"></div>
 
-	<div id="menu"></div>
+	<div id="menu" ms-controller="menu"></div>
 
 
     <div id="content-wrapper">
@@ -82,6 +82,7 @@ Use search to find needed section.
 
 	<div id="main-menu-bg"></div>
 </div> <!-- / #main-wrapper -->
+
 
 <!-- jQuery -->
 <!--[if !IE]> -->
@@ -91,28 +92,39 @@ Use search to find needed section.
 	<script type="text/javascript"> window.jQuery || document.write('<script src="assets/javascripts/jquery-1.8.3.min.js">'+"<"+"/script>"); </script>
 <![endif]-->
 
+<script src="static/js/commons.js"></script>
+
+<script>
+    $('#navbar').html(function () {
+        return getHtml('views/navbar.html');
+    });
+    $('#menu').html(function () {
+        return getHtml('views/menu.html');
+    });
+
+    $('#content-wrapper').html(function () {
+        return getHtml('views/home.html');
+    });
+</script>
+
 
 <!-- Pixel Admin's javascripts -->
 <script src="assets/javascripts/bootstrap.min.js"></script>
 <script src="assets/javascripts/pixel-admin.min.js"></script>
 
-<script src="static/js/commons.js"></script>
+
+<script>
+    if (!document.addEventListener) {
+        document.write('<script src="libs/json3/json3.min.js"><\/script>');
+        document.write('<script src="libs/es6-promise/es6-promise.min.js"><\/script>');
+    }
+</script>
+<script src="libs/avalon2/avalon.js"></script>
+
+<script src="static/js/menu.js"></script>
 
 
 <script type="text/javascript">
-
-	$('#navbar').html(function () {
-		return getHtml('views/navbar.html');
-	});
-	$('#menu').html(function () {
-		return getHtml('views/menu.html');
-	});
-
-	$('#content-wrapper').html(function () {
-		return getHtml('views/home.html');
-	});
-
-
 	init.push(function () {
 		// Javascript code here
 	});
