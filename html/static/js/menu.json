@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "主页 Dashboard",
+        "code": "index2",
+        "url": "index2.html",
+        "icon": "fa-dashboard",
+        "isParent": false,
+        "parentId": null,
+        "parent": null,
+        "children": []
+    },
+    {
+        "id": 2,
+        "name": "布局 Layouts",
+        "code": "index2",
+        "url": "#",
+        "icon": "fa-th",
+        "isParent": true,
+        "parentId": null,
+        "parent": null,
+        "children": [
+            {
+                "id": 3,
+                "name": "网格 Grid",
+                "code": "layouts-grid2",
+                "url": "layouts-grid2.html",
+                "icon": null,
+                "isParent": false,
+                "parentId": 2,
+                "parent": null,
+                "children": []
+            },
+            {
+                "id": 4,
+                "name": "Main menu",
+                "code": "layouts-main-menu",
+                "url": "layouts-main-menu.html",
+                "icon": "fa-th-list",
+                "isParent": false,
+                "parentId": 2,
+                "parent": null,
+                "children": []
+            }
+        ]
+    }
+]
