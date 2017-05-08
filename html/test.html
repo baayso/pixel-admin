@@ -55,5 +55,43 @@
 
 <script src="assets/javascripts/bootstrap.min.js"></script>
 
+<script src="static/js/store.js"></script>
+
+<script>
+
+    function setToken(val) {
+        // localStorage["token"] = token;
+        // 1分钟 = 60000毫秒
+        // 30分钟 = 1800 秒 = 1800000毫秒
+        storeWithExpiration.set("token", val, 30 * 60000);
+    }
+
+    function getToken() {
+        var accessToken = "";
+
+        // var obj = localStorage["token"];
+        var obj = storeWithExpiration.get("token");
+
+        if (obj) {
+            accessToken = obj;
+        }
+
+        return accessToken;
+    }
+
+    function removeToken() {
+        //localStorage.removeItem("token");
+        storeWithExpiration.del("token");
+    }
+
+    $(function ($) {
+        setToken("12121");
+
+        alert(getToken("token"));
+
+        // removeToken();
+    });
+</script>
+
 </body>
 </html>
