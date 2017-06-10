@@ -35,12 +35,35 @@
                 "id": 4,
                 "name": "Main menu",
                 "code": "layouts-main-menu",
-                "url": "layouts-main-menu.html",
+                "url": "#",
                 "icon": "fa-th-list",
-                "isParent": false,
+                "isParent": true,
                 "parentId": 2,
                 "parent": null,
-                "children": []
+                "children": [
+                    {
+                        "id": 3,
+                        "name": "网格 Grid",
+                        "code": "layouts-grid2",
+                        "url": "layouts-grid2.html",
+                        "icon": "",
+                        "isParent": false,
+                        "parentId": 4,
+                        "parent": null,
+                        "children": []
+                    },
+                    {
+                        "id": 4,
+                        "name": "Main menu",
+                        "code": "layouts-main-menu",
+                        "url": "layouts-main-menu.html",
+                        "icon": "",
+                        "isParent": false,
+                        "parentId": 4,
+                        "parent": null,
+                        "children": []
+                    }
+                ]
             }
         ]
     }
