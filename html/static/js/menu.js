@@ -1,11 +1,3 @@
-avalon.config({debug: false});
-
-var vm = avalon.define({
-    $id: 'menu',
-    ccc: "测试内容",
-    data: []
-});
-
 
 // jQuery.support.cors = true;
 $.ajax({
@@ -14,7 +6,11 @@ $.ajax({
     // data: requestParam,
     async: false,
     success: function (result) {
-        vm.data = result;
+        var data = {
+            data: result
+        };
+
+        document.getElementById('navigation').innerHTML = template('tpl-menu', data);
     },
     error: function (e) {
     }

@@ -74,7 +74,7 @@ Use search to find needed section.
 
 	<div id="navbar"></div>
 
-	<div id="menu" ms-controller="menu"></div>
+	<div id="menu"></div>
 
 
     <div id="content-wrapper">
@@ -113,18 +113,19 @@ Use search to find needed section.
 <script src="assets/javascripts/pixel-admin.min.js"></script>
 
 
-<script>
-    if (!document.addEventListener) {
-        document.write('<script src="libs/json3/json3.min.js"><\/script>');
-        document.write('<script src="libs/es6-promise/es6-promise.min.js"><\/script>');
-    }
-</script>
-<script src="libs/avalon2/avalon.js"></script>
+<!--[if lte IE 8]>
+	<script src="libs/es5/es5-shim.min.js"></script>
+	<script src="libs/es5/es5-sham.min.js"></script>
+	<script src="libs/json3/json3.min.js"></script>
+<![endif]-->
+
+<script src="libs/art-template/template-web.js"></script>
+
 
 <script src="static/js/menu.js"></script>
 
 
-<script type="text/javascript">
+<script>
 	init.push(function () {
 		// Javascript code here
 	});

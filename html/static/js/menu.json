@@ -25,7 +25,7 @@
                 "name": "网格 Grid",
                 "code": "layouts-grid2",
                 "url": "layouts-grid2.html",
-                "icon": null,
+                "icon": "",
                 "isParent": false,
                 "parentId": 2,
                 "parent": null,

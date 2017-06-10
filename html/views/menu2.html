@@ -44,21 +44,42 @@
         </div>
         -->
 
-        <ul class="navigation">
-            <li ms-for="(i, e) in @data" ms-attr="{class: e.isParent && 'mm-dropdown'}">
-                <a ms-attr="{href: e.url}">
-                    <i ms-if="@e.icon" ms-attr="{class: 'menu-icon fa '+ e.icon}"></i>
-                    <span class="mm-text">{{e.name}}</span>
-                </a>
-                <ul ms-if="@e.isParent">
-                    <li ms-for="(i2, e2) in @e.children">
-                        <a tabindex="-1" ms-attr="{href: e2.url}">
-                            <i ms-if="@e2.icon" ms-attr="{class: 'menu-icon fa '+ e2.icon}"></i>
-                            <span class="mm-text">{{e2.name}}</span>
+        <ul id="navigation" class="navigation">
+
+            <script id="tpl-menu" type="text/html">
+                {{each data v i}}
+                    {{if v.isParent}}
+                    <li class="mm-dropdown">
+                    {{else}}
+                    <li>
+                    {{/if}}
+                        <a href="{{v.url}}">
+                            {{if v.icon == ''}}
+                            <i class="menu-icon fa"></i>
+                            {{else}}
+                            <i class="{{'menu-icon fa ' + v.icon}}"></i>
+                            {{/if}}
+                            <span class="mm-text">{{v.name}}</span>
                         </a>
+                        {{if v.isParent}}
+                        <ul>
+                            {{each v.children v2 i2}}
+                                <li>
+                                    <a tabindex="-1" href="{{v2.url}}">
+                                        {{if v2.icon == ''}}
+                                        <i class="menu-icon fa"></i>
+                                        {{else}}
+                                        <i class="{{'menu-icon fa ' + v2.icon}}"></i>
+                                        {{/if}}
+                                        <span class="mm-text">{{v2.name}}</span>
+                                    </a>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        {{/if}}
                     </li>
-                </ul>
-            </li>
+                {{/each}}
+            </script>
 
             <li>
                 <a href="index2.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">主页 Dashboard</span></a>
@@ -249,8 +270,6 @@
         </ul> <!-- / .navigation -->
         <div class="menu-content">
             <a href="pages-invoice.html" class="btn btn-primary btn-block btn-outline dark">Create Invoice</a>
-            <a href="javascript:void(0);" class="btn btn-primary btn-block btn-outline dark">{{@ccc}}</a>
-            <a href="javascript:void(0);" class="btn btn-primary btn-block btn-outline dark">{{new Date | date('yyyy-MM-dd HH:mm:ss')}}</a>
         </div>
     </div> <!-- / #main-menu-inner -->
 </div> <!-- / #main-menu -->
