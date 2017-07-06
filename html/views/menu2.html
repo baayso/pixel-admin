@@ -48,33 +48,17 @@
 
             <script id="tpl-menu" type="text/html">
                 {{each data v i}}
-                    {{if v.isParent}}
-                    <li class="mm-dropdown">
-                    {{else}}
-                    <li>
-                    {{/if}}
+                    <li class="{{v.isParent ? 'mm-dropdown' : ''}}">
                         <a href="{{v.url}}">
-                            {{if v.icon == ''}}
-                            <i class="menu-icon fa"></i>
-                            {{else}}
-                            <i class="{{'menu-icon fa ' + v.icon}}"></i>
-                            {{/if}}
+                            <i class="{{v.icon == '' ? 'menu-icon fa' : 'menu-icon fa ' + v.icon}}"></i>
                             <span class="mm-text">{{v.name}}</span>
                         </a>
                         {{if v.isParent}}
                         <ul>
                             {{each v.children v2 i2}}
-                                {{if v2.isParent}}
-                                <li class="mm-dropdown">
-                                {{else}}
-                                <li>
-                                {{/if}}
+                                <li class="{{v2.isParent ? 'mm-dropdown' : ''}}">
                                     <a tabindex="-1" href="{{v2.url}}">
-                                        {{if v2.icon == ''}}
-                                        <i class="menu-icon fa"></i>
-                                        {{else}}
-                                        <i class="{{'menu-icon fa ' + v2.icon}}"></i>
-                                        {{/if}}
+                                        <i class="{{v2.icon == '' ? 'menu-icon fa' : 'menu-icon fa ' + v2.icon}}"></i>
                                         <span class="mm-text">{{v2.name}}</span>
                                     </a>
                                     {{if v2.isParent}}
@@ -82,11 +66,7 @@
                                         {{each v2.children v3 i3}}
                                         <li>
                                             <a tabindex="-1" href="{{v3.url}}">
-                                                {{if v3.icon == ''}}
-                                                <i class="menu-icon fa"></i>
-                                                {{else}}
-                                                <i class="{{'menu-icon fa ' + v3.icon}}"></i>
-                                                {{/if}}
+                                                <i class="{{v3.icon == '' ? 'menu-icon fa' : 'menu-icon fa ' + v3.icon}}"></i>
                                                 <span class="mm-text">{{v3.name}}</span>
                                             </a>
 
