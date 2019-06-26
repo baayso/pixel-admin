@@ -42,7 +42,7 @@
                 "parent": null,
                 "children": [
                     {
-                        "id": 3,
+                        "id": 5,
                         "name": "网格 Grid",
                         "code": "layouts-grid2",
                         "url": "layouts-grid2.html",
@@ -53,7 +53,7 @@
                         "children": []
                     },
                     {
-                        "id": 4,
+                        "id": 6,
                         "name": "Main menu",
                         "code": "layouts-main-menu",
                         "url": "layouts-main-menu.html",
